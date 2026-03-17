@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>grepi — Epidemiological Parameter Estimation for R</title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/grepi-ico.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" aria-label="grepi — go to top">
+      <img src="assets/img/grepiFullLogo.png" alt="grepi" />
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav__links" id="navMenu">
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#manual"   class="nav-link">User Manual</a></li>
+        <li><a href="#api"      class="nav-link">API Documentation</a></li>
+        <li><a href="#roadmap"  class="nav-link">Roadmap</a></li>
+        <li><a href="#releases" class="nav-link">Release Notes</a></li>
+      </ul>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero s-hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero__body">
+      <!-- <span class="hero__eyebrow">R Package · Epidemiology · Version 1.0</span> -->
+      <h1 class="section__title">Global Repository of <br><span class="section__title_yellow">Epidemiological Parameters</span></h1><br>
+      <!-- <div class="hero__rule"></div> -->
+      <!-- <p class="hero__tagline">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Designed for epidemiologists, mathematicians, and data scientists using R.
+      </p> -->
+      <div class="hero__cta">
+        <a href="#manual" class="btn btn-primary">Get Started</a>
+        <a href="#api"    class="btn btn-primary">User Manual</a>
+        <a href="#api"    class="btn btn-primary">API Documentation</a>
+      </div>
+      <div class="hero__badges">
+        <span class="badge">Epidemiology</span>
+        <span class="badge">Data Science</span>
+        <span class="badge">Collaboration</span>
+        <span class="badge">Circus</span>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section s-about parallax-section" id="about" data-parallax="0.08">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="section__title">What is grepi?</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal d1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum. Sed perspiciatis unde omnis iste natus error.
+          </p>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.
+          </p>
+          <a href="#manual" class="btn btn-gold" style="width: fit-content; margin-top: 0.5rem;">Read the User Manual →</a>
+        </div>
+        <div class="about-img-wrap reveal d2">
+          <div class="img-placeholder">
+            <div class="img-placeholder__icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <span class="img-placeholder__label">Figure / Screenshot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="features">
+        <div class="feat-card reveal d1">
+          <div class="feat-card__icon">⚡</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="feat-card reveal d2">
+          <div class="feat-card__icon">🔬</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="feat-card reveal d3">
+          <div class="feat-card__icon">📈</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-card__icon">🧮</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+        </div>
+        <div class="feat-card reveal d2">
+          <div class="feat-card__icon">📦</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+        </div>
+        <div class="feat-card reveal d3">
+          <div class="feat-card__icon">📋</div>
+          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
+          <p class="feat-card__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Manual -->
+  <section class="section s-manual parallax-section" id="manual" data-parallax="0.05">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">User Manual</span>
+        <h2 class="section__title">Getting started with grepi</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+          nisi ut aliquid ex ea commodi consequatur.
+        </p>
+      </div>
+
+      <div class="manual-layout reveal">
+        <aside>
+          <div class="manual-toc">
+            <div class="manual-toc__hd">Contents</div>
+            <ul class="manual-toc__list">
+              <li><a href="#manual-install">Quick Start</a></li>
+              <li><a href="#manual-quick">Epi Parameters</a></li>
+              <li><a href="#manual-data">Reference Data</a></li>
+              <li><a href="#manual-models">Articles</a></li>
+              <li><a href="#manual-diag">Public UI</a></li>
+              <li><a href="#manual-export">Export &amp; Reports</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="manual-content">
+          <div class="manual-block" id="manual-install">
+            <h3 class="manual-block__title">Quick Start</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="about-img-wrap reveal d2">
+              <div class="img-placeholder">
+                <div class="img-placeholder__icon">
+                  <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <span class="img-placeholder__label">Figure / Screenshot</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="manual-block" id="manual-quick">
+            <h3 class="manual-block__title">Epi Parameters</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="about-img-wrap reveal d2">
+              <div class="img-placeholder">
+                <div class="img-placeholder__icon">
+                  <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <span class="img-placeholder__label">Figure / Screenshot</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="manual-block" id="manual-data">
+            <h3 class="manual-block__title">Data Preparation</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <div class="img-placeholder img-placeholder--sm img-placeholder--light">
+              <div class="img-placeholder__icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"/></svg>
+              </div>
+              <span class="img-placeholder__label">Data structure diagram</span>
+            </div>
+          </div>
+
+          <div class="manual-block" id="manual-models">
+            <h3 class="manual-block__title">Model Fitting</h3>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+            <div class="img-placeholder img-placeholder--light" style="aspect-ratio:16/7">
+              <div class="img-placeholder__icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="img-placeholder__label">Fitted curve output</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Documentation -->
+  <section class="section s-api parallax-section" id="api" data-parallax="0.05">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">API Documentation</span>
+        <h2 class="section__title">Public Endpoints</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+      <div class="api-grid">
+        <div class="api-card reveal d1">
+          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
+          <p class="api-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fit epidemic models via MLE or Bayesian inference.</p>
+          <div class="api-tags">
+            <span class="api-tag">core</span>
+            <span class="api-tag">estimation</span>
+            <span class="api-tag">S3</span>
+          </div>
+        </div>
+        <div class="api-card reveal d2">
+          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
+          <p class="api-card__desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Generate probabilistic forecasts from a fitted grepi model object with uncertainty quantification.</p>
+          <div class="api-tags">
+            <span class="api-tag">forecasting</span>
+            <span class="api-tag">uncertainty</span>
+          </div>
+        </div>
+        <div class="api-card reveal d3">
+          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
+          <p class="api-card__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Model diagnostics, residuals, and goodness-of-fit statistics.</p>
+          <div class="api-tags">
+            <span class="api-tag">diagnostics</span>
+            <span class="api-tag">GOF</span>
+          </div>
+        </div>
+        <div class="api-card reveal d4">
+          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
+          <p class="api-card__desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. Produce publication-ready ggplot2 visualisations of model fits, forecasts, and parameter posteriors.</p>
+          <div class="api-tags">
+            <span class="api-tag">visualisation</span>
+            <span class="api-tag">ggplot2</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 2.5rem;" class="reveal">
+        <div class="img-placeholder img-placeholder--wide">
+          <div class="img-placeholder__icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+          <span class="img-placeholder__label">API reference screenshot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="section s-roadmap parallax-section" id="roadmap" data-parallax="0.06">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">Roadmap</span>
+        <h2 class="section__title">Development roadmap</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Ut labore et dolore magna aliqua. A transparent view of where grepi has been
+          and where it is heading.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline reveal">
+        <div class="road-item done">
+          <div class="road-item__meta">
+            <span class="road-item__ver">v0.1</span>
+            <span class="road-item__date">Q1 2026</span>
+          </div>
+          <h4 class="road-item__title">Initial Release</h4>
+          <p class="road-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Basic SIR/SEIR model fitting via maximum likelihood estimation.</p>
+          <div class="road-item__tags">
+            <span class="road-tag rt-model">Tag 1</span>
+            <span class="road-tag rt-api">Tag 2</span>
+          </div>
+        </div>
+
+        <div class="road-item done">
+          <div class="road-item__meta">
+            <span class="road-item__ver">v0.3</span>
+            <span class="road-item__date">Q3 2026</span>
+          </div>
+          <h4 class="road-item__title">Lorem ipsum dolor sit amet</h4>
+          <p class="road-item__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolorem.</p>
+          <div class="road-item__tags">
+            <span class="road-tag rt-model">Tag 1</span>
+            <span class="road-tag rt-perf">Tag 2</span>
+            <span class="road-tag rt-viz">Tag 3</span>
+          </div>
+        </div>
+
+        <div class="road-item active">
+          <div class="road-item__meta">
+            <span class="road-item__ver">v1.0</span>
+            <span class="road-item__date">Q1 2026</span>
+          </div>
+          <h4 class="road-item__title">Lorem ipsum dolor sit amet</h4>
+          <p class="road-item__desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+          <div class="road-item__tags">
+            <span class="road-tag rt-api">Stable API</span>
+            <span class="road-tag rt-docs">CRAN</span>
+            <span class="road-tag rt-docs">Vignettes</span>
+          </div>
+        </div>
+
+        <div class="road-item planned">
+          <div class="road-item__meta">
+            <span class="road-item__ver">v1.2</span>
+            <span class="road-item__date">Q3 2026</span>
+          </div>
+          <h4 class="road-item__title">Lorem ipsum dolor sit amet</h4>
+          <p class="road-item__desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <div class="road-item__tags">
+            <span class="road-tag rt-model">Tag 1</span>
+            <span class="road-tag rt-model">Tag 2</span>
+            <span class="road-tag rt-viz">Tag 3</span>
+          </div>
+        </div>
+
+        <div class="road-item planned">
+          <div class="road-item__meta">
+            <span class="road-item__ver">v2.0</span>
+            <span class="road-item__date">Q1 2026 — planned</span>
+          </div>
+          <h4 class="road-item__title">Lorem ipsum dolor sit amet</h4>
+          <p class="road-item__desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+          <div class="road-item__tags">
+            <span class="road-tag rt-api">Tag 1</span>
+            <span class="road-tag rt-perf">Tag 2</span>
+            <span class="road-tag rt-viz">Tag 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Release Notes -->
+  <section class="section s-releases parallax-section" id="releases" data-parallax="0.05">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">Release Notes</span>
+        <h2 class="section__title">Changelog</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Full version history
+          with breaking changes, new features, and bug fixes.
+        </p>
+      </div>
+
+      <div class="releases">
+        <div class="release-card reveal d1">
+          <div class="release-card__hd">
+            <span class="release-card__ver">v1.0.2</span>
+            <span class="release-card__date">March 2025</span>
+            <span class="release-card__badge rb-latest">Latest</span>
+          </div>
+          <div class="release-card__body">
+            <ul class="release-list">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+              <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+              <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="release-card reveal d2">
+          <div class="release-card__hd">
+            <span class="release-card__ver">v1.0.0</span>
+            <span class="release-card__date">January 2025</span>
+            <span class="release-card__badge rb-stable">Stable</span>
+          </div>
+          <div class="release-card__body">
+            <ul class="release-list">
+              <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
+              <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</li>
+              <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</li>
+              <li>Ut labore et dolore magnam aliquam quaerat voluptatem, quis autem vel eum iure reprehenderit.</li>
+              <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="release-card reveal d3">
+          <div class="release-card__hd">
+            <span class="release-card__ver">v0.3.1</span>
+            <span class="release-card__date">October 2024</span>
+            <span class="release-card__badge rb-legacy">Legacy</span>
+          </div>
+          <div class="release-card__body">
+            <ul class="release-list">
+              <li>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</li>
+              <li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint.</li>
+              <li>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="grepi-footer-container">
+
+      <div class="grepi-footer-collab">
+        <div>
+          <a href="https://www.who.int/initiatives/collaboratory" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/collab_logo_white.png" alt="Collaboratory" class="grepi-footer-collab-logo">
+          </a>
+        </div>
+        <div class="grepi-footer-collab-text">A Laboratory for Pandemic and</div>
+        <div class="grepi-footer-collab-text">Epidemic Intelligence</div>
+      </div>
+
+      <div class="grepi-footer-column grepi-footer-column-wide">
+        <div class="grepi-footer-title">Community of practice</div>
+        <div class="grepi-footer-link">
+          <a href="#manual" rel="noopener noreferrer">Epidemiological Parameters</a>
+        </div>
+        <div class="grepi-footer-link">
+          <a href="#manual"  rel="noopener noreferrer">User Manual</a>
+        </div>
+      </div>
+
+      <div class="grepi-footer-column grepi-footer-who-col">
+        <div class="grepi-footer-who">
+          <div class="grepi-footer-who-text">
+            <a target="_blank" href="https://pandemichub.who.int/" rel="noopener noreferrer">
+              Better data. Better analytics. Better decisions.
+            </a>
+          </div>
+          <img src="assets/img/WHO-EN-W-H.png" alt="WHO" class="grepi-footer-who-logo">
+        </div>
+      </div>
+
+      <div class="grepi-footer-column">
+        <div class="grepi-footer-title"><a href="https://collaboratory.who.int/epidemiologicalparameters/repository" target="_blank" rel="noopener noreferrer">grEPI</a></div>
+        <div class="grepi-footer-link"><a href="#about">Getting started</a></div>
+        <div class="grepi-footer-link"><a href="#api">API Documentation</a></div>
+      </div>
+
+      <div class="grepi-footer-column">
+        <div class="grepi-footer-title">Contact us</div>
+        <div class="grepi-footer-link">
+          <a href="mailto:collaboratory@who.int">collaboratory@who.int</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    /* ─── Hero Canvas — SIR Epidemic Phase Portrait ──────────────
+     *
+     * The classic SIR model in the (S, I) phase plane:
+     *   dS/dt = −β·S·I       dI/dt = β·S·I − γ·I
+     *
+     * Each curve is a mathematically exact ODE trajectory for a
+     * different R₀ value and initial infected fraction I₀.
+     * Particles flow along these paths: gold at peak infection,
+     * navy as immunity establishes — a live epidemic phase portrait.
+     *
+     * Implemented with Canvas 2D for universal browser support.
+     * ─────────────────────────────────────────────────────────── */
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx    = canvas.getContext('2d');
+      if (!ctx) return;
+
+      /* ── Pre-compute SIR trajectories (RK4) ──────────────────────
+       * S ∈ [0,1], I ∈ [0,~0.6]  in the classic normalized SIR.    */
+      function sirPath(R0, I0) {
+        const pts = [], gamma = 1, beta = R0 * gamma;
+        let S = Math.max(1e-6, 1 - I0), I = I0;
+        const dt = 0.08, maxSteps = 900;
+        for (let n = 0; n < maxSteps && I > 1e-5; n++) {
+          pts.push({ s: S, i: I });
+          /* RK4 */
+          const k1s = -beta*S*I,            k1i = beta*S*I - gamma*I;
+          const k2s = -beta*(S+k1s*dt/2)*(I+k1i*dt/2);
+          const k2i =  beta*(S+k1s*dt/2)*(I+k1i*dt/2) - gamma*(I+k1i*dt/2);
+          const k3s = -beta*(S+k2s*dt/2)*(I+k2i*dt/2);
+          const k3i =  beta*(S+k2s*dt/2)*(I+k2i*dt/2) - gamma*(I+k2i*dt/2);
+          const k4s = -beta*(S+k3s*dt)*(I+k3i*dt);
+          const k4i =  beta*(S+k3s*dt)*(I+k3i*dt) - gamma*(I+k3i*dt);
+          S = Math.max(0, S + (k1s+2*k2s+2*k3s+k4s)*dt/6);
+          I = Math.max(0, I + (k1i+2*k2i+2*k3i+k4i)*dt/6);
+        }
+        if (pts.length > 4) {
+          const iMax = Math.max(...pts.map(p=>p.i));
+          pts.forEach(p => { p.peak = p.i / (iMax||1); });
+        }
+        return pts;
+      }
+
+      /* Build a diverse set of curves */
+      const curves = [];
+      const R0vals = [1.8, 2.8, 4.0, 5.5];
+      const I0vals = [0.005, 0.020, 0.060];
+      for (const R0 of R0vals) {
+        for (const I0 of I0vals) {
+          const pts = sirPath(R0, I0);
+          if (pts.length > 10) curves.push({ pts, R0 });
+        }
+      }
+
+      /* ── Map (S,I) → canvas pixels ──────────────────────────── */
+      let W, H;
+      function toXY(s, i) {
+        const padX = W * 0.08, padYt = H * 0.14, padYb = H * 0.10;
+        return {
+          x: padX + s * (W - 2 * padX),
+          y: (H - padYb) - (i / 0.52) * (H - padYt - padYb),
+        };
+      }
+
+      /* ── Colour helpers ──────────────────────────────────────── */
+      /* peak=1 → gold (#C9920A),  peak=0 → navy (#00205C) */
+      function lerpColour(peak) {
+        const r = (0   + (201-0)   * peak) | 0;
+        const g = (32  + (146-32)  * peak) | 0;
+        const b = (92  + (10 -92)  * peak) | 0;
+        return { r, g, b };
+      }
+
+      /* ── Draw all curve paths (very faint, redrawn each frame) ── */
+      function drawCurves() {
+        for (const { pts } of curves) {
+          if (pts.length < 2) continue;
+          const { r, g, b } = lerpColour(pts[Math.floor(pts.length * 0.35)].peak || 0);
+          ctx.beginPath();
+          const p0 = toXY(pts[0].s, pts[0].i);
+          ctx.moveTo(p0.x, p0.y);
+          for (let n = 1; n < pts.length; n++) {
+            const { x, y } = toXY(pts[n].s, pts[n].i);
+            ctx.lineTo(x, y);
+          }
+          ctx.strokeStyle = `rgba(${r},${g},${b},0.055)`;
+          ctx.lineWidth   = 1;
+          ctx.stroke();
+        }
+      }
+
+      /* ── Flowing particles ───────────────────────────────────── */
+      const NPART = 80;
+      const parts = [];
+      for (let p = 0; p < NPART; p++) {
+        const ci = Math.floor(Math.random() * curves.length);
+        parts.push({
+          ci,
+          t:     Math.random(),
+          speed: 0.00008 + Math.random() * 0.00012,
+          size:  1.4 + Math.random() * 2.8,
+          phase: Math.random() * Math.PI * 2,   /* for gentle size pulse */
+        });
+      }
+
+      let frame = 0;
+      function drawParticles() {
+        for (const p of parts) {
+          const curve = curves[p.ci];
+          const npts  = curve.pts.length;
+          p.t = (p.t + p.speed) % 1;
+
+          const fi   = p.t * (npts - 1);
+          const idx  = Math.min(Math.floor(fi), npts - 2);
+          const frac = fi - idx;
+          const A = curve.pts[idx], B = curve.pts[idx + 1];
+          const s = A.s + (B.s - A.s) * frac;
+          const i = A.i + (B.i - A.i) * frac;
+          const peak = (A.peak||0) + ((B.peak||0) - (A.peak||0)) * frac;
+
+          const { x, y } = toXY(s, i);
+          const { r, g, b } = lerpColour(peak);
+          const alpha = 0.45 + 0.40 * peak;
+          const sz = p.size * (1 + 0.15 * Math.sin(frame * 0.03 + p.phase));
+
+          ctx.beginPath();
+          ctx.arc(x, y, sz, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r},${g},${b},${alpha.toFixed(2)})`;
+          ctx.fill();
+        }
+      }
+
+      /* ── Axis labels ─────────────────────────────────────────── */
+      function drawLabels() {
+        ctx.save();
+        ctx.font = '600 11px "Source Sans 3", sans-serif';
+        ctx.fillStyle = 'rgba(0,32,92,0.32)';
+        ctx.textAlign = 'center';
+        /* S axis bottom */
+        const ax0 = toXY(0, 0), ax1 = toXY(1, 0);
+        ctx.fillText('S  (Susceptible)', (ax0.x + ax1.x) / 2, ax0.y + 22);
+        /* I axis left */
+        ctx.save();
+        const ay0 = toXY(0, 0), ay1 = toXY(0, 0.5);
+        ctx.translate(ay0.x - 24, (ay0.y + ay1.y) / 2);
+        ctx.rotate(-Math.PI / 2);
+        ctx.fillText('I  (Infected)', 0, 0);
+        ctx.restore();
+        ctx.restore();
+      }
+
+      /* ── Resize ──────────────────────────────────────────────── */
+      function resize() {
+        W = canvas.width  = canvas.offsetWidth  || window.innerWidth;
+        H = canvas.height = canvas.offsetHeight || window.innerHeight;
+      }
+
+      /* ── Main render loop ────────────────────────────────────── */
+      function render() {
+        frame++;
+        /* Soft trail — semi-transparent white fills leave ghost paths */
+        ctx.fillStyle = 'rgba(255,255,255,0.14)';
+        ctx.fillRect(0, 0, W, H);
+
+        drawCurves();
+        drawParticles();
+        drawLabels();
+        requestAnimationFrame(render);
+      }
+
+      window.addEventListener('resize', resize, { passive: true });
+      resize();
+      requestAnimationFrame(render);
+    })();
+
+    /* ─── Navigation ─────────────────────────────────────────── */
+    const nav    = document.getElementById('nav');
+    const burger = document.getElementById('burger');
+    const menu   = document.getElementById('navMenu');
+
+    const backToTop = document.getElementById('back-to-top');
+    const footer    = document.querySelector('footer');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+
+      const footerTop    = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const defaultBottom = 32; // 2rem in px
+      if (footerTop < windowHeight) {
+        backToTop.style.bottom = (windowHeight - footerTop + defaultBottom) + 'px';
+      } else {
+        backToTop.style.bottom = '';
+      }
+    }, { passive: true });
+
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+
+    // Active nav link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => io.observe(s));
+
+    // Close menu on link click
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        menu.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
+      });
+    });
+
+    /* ─── Back to top ─────────────────────────────────────────── */
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ─── Scroll reveal ───────────────────────────────────────── */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    /* ─── Parallax ────────────────────────────────────────────── */
+    const parallaxSections = document.querySelectorAll('.parallax-section');
+    function applyParallax() {
+      parallaxSections.forEach(el => {
+        const factor = parseFloat(el.dataset.parallax) || 0.05;
+        const rect   = el.getBoundingClientRect();
+        const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+        el.style.transform = `translateY(${center * factor}px)`;
+      });
+    }
+    window.addEventListener('scroll', applyParallax, { passive: true });
+    applyParallax();
+
+    /* ─── Copy code buttons ──────────────────────────────────── */
+    function copyCode(btn) {
+      const pre = btn.closest('.code-block').querySelector('pre');
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 1800);
+      });
+    }
+  </script>
+</body>
+</html>
