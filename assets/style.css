@@ -17,7 +17,7 @@
 
 /* ─── Reset ─────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: var(--nav-h); }
 body {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 400;

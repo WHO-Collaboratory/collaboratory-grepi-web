@@ -735,7 +735,8 @@
         const factor = parseFloat(el.dataset.parallax) || 0.05;
         const rect   = el.getBoundingClientRect();
         const center = rect.top + rect.height / 2 - window.innerHeight / 2;
-        el.style.transform = `translateY(${center * factor}px)`;
+        const inner = el.querySelector('.section__inner');
+        if (inner) inner.style.transform = `translateY(${center * factor}px)`;
       });
     }
     window.addEventListener('scroll', applyParallax, { passive: true });
