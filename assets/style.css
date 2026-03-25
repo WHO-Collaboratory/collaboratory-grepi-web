@@ -4,6 +4,7 @@
   --navy-mid:  #003080;
   --gold:      #C9920A;
   --gold-lt:   #F4A81D;
+  --blue:     #009ADE;
   --gold-pale: rgba(201,146,10,0.10);
   --white:     #FFFFFF;
   --off-white: #F7F8FA;
@@ -52,11 +53,11 @@ ul  { list-style: none; }
   box-shadow: 0 1px 28px rgba(0,32,92,0.08);
 }
 .nav__logo {
-  height: 46px;
-  width: 200px;
+  position: relative;
+  height: 150px;
+  width: 250px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
 }
 .nav__logo img {
   height: 100%;
@@ -148,6 +149,17 @@ ul  { list-style: none; }
   text-align: center;
   padding: 8rem 1.5rem 5rem;
   max-width: 780px;
+}
+.hero__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero__brand img {
+  height: 1em;
+  width: auto;
 }
 .hero__eyebrow {
   display: inline-block;
@@ -283,11 +295,16 @@ ul  { list-style: none; }
   line-height: 1.2;
   margin-bottom: 0.8rem;
 }
+.section__title_navy {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  color: var(--navy);
+}
 .section__title_yellow {
   font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(1.6rem, 3.2vw, 2.1rem);
-  font-weight: 400;
-  color: var(--gold);
+  font-weight: 600;
+  color: #009ADE;
   line-height: 1.2;
   margin-bottom: 0.8rem;
 }

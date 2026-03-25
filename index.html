@@ -16,7 +16,7 @@
   <!-- Navigation -->
   <header class="nav" id="nav">
     <a href="#hero" class="nav__logo" aria-label="grepi — go to top">
-      <img src="assets/img/grepiFullLogo.png" alt="grepi" />
+      <img src="assets/img/collab_0.png" alt="grepi" />
     </a>
     <nav aria-label="Main navigation">
       <ul class="nav__links" id="navMenu">
@@ -42,7 +42,8 @@
     <canvas id="hero-canvas"></canvas>
     <div class="hero__body">
       <!-- <span class="hero__eyebrow">R Package · Epidemiology · Version 1.0</span> -->
-      <h1 class="section__title">Global Repository of <br><span class="section__title_yellow">Epidemiological Parameters</span></h1><br>
+      <div class="hero__brand"><img src="assets/img/grepi-ico.png" alt="grepi" /><span class="section__title_navy">grEPI</span></div>
+      <h1 class="section__title_yellow">Global Repository of <span class="section__title_yellow">Epidemiological Parameters</span></h1>
       <!-- <div class="hero__rule"></div> -->
       <!-- <p class="hero__tagline">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
@@ -559,11 +560,11 @@
       }
 
       /* ── Colour helpers ──────────────────────────────────────── */
-      /* peak=1 → gold (#C9920A),  peak=0 → navy (#00205C) */
+      /* peak=1 → gold (#C9920A),  peak=0 → blue (#009ADE) */
       function lerpColour(peak) {
         const r = (0   + (201-0)   * peak) | 0;
-        const g = (32  + (146-32)  * peak) | 0;
-        const b = (92  + (10 -92)  * peak) | 0;
+        const g = (154 + (146-154) * peak) | 0;
+        const b = (222 + (10 -222) * peak) | 0;
         return { r, g, b };
       }
 
@@ -619,9 +620,12 @@
           const alpha = 0.45 + 0.40 * peak;
           const sz = p.size * (1 + 0.15 * Math.sin(frame * 0.03 + p.phase));
 
+          const dr = (201 + (0  -201) * p.t) | 0;
+          const dg = (146 + (32 -146) * p.t) | 0;
+          const db = (10  + (92 -10)  * p.t) | 0;
           ctx.beginPath();
           ctx.arc(x, y, sz, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${r},${g},${b},${alpha.toFixed(2)})`;
+          ctx.fillStyle = `rgba(${dr},${dg},${db},${alpha.toFixed(2)})`;
           ctx.fill();
         }
       }
