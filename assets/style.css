@@ -91,7 +91,7 @@ ul  { list-style: none; }
   transform-origin: left;
   transition: transform 0.25s var(--ease);
 }
-.nav__links a:hover            { color: var(--navy-mid); }
+.nav__links a:hover            { color: var(--blue); }
 .nav__links a:hover::after,
 .nav__links a.active::after    { transform: scaleX(1); }
 .nav__links a.active           { color: var(--navy); }
