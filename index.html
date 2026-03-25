@@ -629,13 +629,13 @@
         ctx.textAlign = 'center';
         /* S axis bottom */
         const ax0 = toXY(0, 0), ax1 = toXY(1, 0);
-        ctx.fillText('S  (Susceptible)', (ax0.x + ax1.x) / 2, ax0.y + 22);
+        ctx.fillText('', (ax0.x + ax1.x) / 2, ax0.y + 22);
         /* I axis left */
         ctx.save();
         const ay0 = toXY(0, 0), ay1 = toXY(0, 0.5);
         ctx.translate(ay0.x - 24, (ay0.y + ay1.y) / 2);
         ctx.rotate(-Math.PI / 2);
-        ctx.fillText('I  (Infected)', 0, 0);
+        ctx.fillText('', 0, 0);
         ctx.restore();
         ctx.restore();
       }
