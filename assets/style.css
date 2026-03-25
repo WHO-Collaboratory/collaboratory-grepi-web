@@ -268,7 +268,7 @@ ul  { list-style: none; }
   transition: all 0.25s var(--ease);
 }
 .btn-primary  { background: var(--navy); color: var(--white); border-color: var(--navy); }
-.btn-primary:hover { background: var(--navy-mid); border-color: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,32,92,0.22); }
+.btn-primary:hover { background: var(--blue); border-color: var(--blue); }
 .btn-outline  { background: transparent; color: var(--navy); border-color: var(--navy); }
 .btn-outline:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
 .btn-gold     { background: var(--gold-lt); color: var(--white); border-color: var(--gold-lt); }
