@@ -297,7 +297,7 @@ ul  { list-style: none; }
 }
 .section__title_navy {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  font-size: clamp(2.6rem, 3.2vw, 2.1rem);
   color: var(--navy);
 }
 .section__title_yellow {

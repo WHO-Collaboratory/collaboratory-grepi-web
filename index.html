@@ -620,9 +620,10 @@
           const alpha = 0.45 + 0.40 * peak;
           const sz = p.size * (1 + 0.15 * Math.sin(frame * 0.03 + p.phase));
 
-          const dr = (201 + (0  -201) * p.t) | 0;
-          const dg = (146 + (32 -146) * p.t) | 0;
-          const db = (10  + (92 -10)  * p.t) | 0;
+          const ct = p.t * p.t * (3 - 2 * p.t);
+          const dr = (201 + (0  -201) * ct) | 0;
+          const dg = (146 + (32 -146) * ct) | 0;
+          const db = (10  + (92 -10)  * ct) | 0;
           ctx.beginPath();
           ctx.arc(x, y, sz, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(${dr},${dg},${db},${alpha.toFixed(2)})`;
