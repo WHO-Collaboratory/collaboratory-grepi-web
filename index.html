@@ -81,7 +81,7 @@
         </p>-->
       </div>
 
-      <div class="about-grid">
+      <div class="">
         <div class="about-text reveal d1">
           <p>
             <a target="_blank" href="https://collaboratory.who.int/epidemiologicalparameters/repository">grEPI</a> is a digital public good for health, a free and open-access software product whose aim is to serve as a 
@@ -93,15 +93,22 @@
           <p>
           grEPI product is in its early stage and under development, current version represents proof-of-concept which aims to demonstrate how having a central living place for epidemiological parameter estimates can help... as well as discover the ways to continuously evolve...
           </p>
-          <a href="#manual" class="btn btn-gold" style="width: fit-content; margin-top: 0.5rem;">Read the User Manual →</a>
         </div>
-        <div class="about-img-wrap reveal d2">
-          <div class="img-placeholder">
-            <div class="img-placeholder__icon">
-              <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <span class="img-placeholder__label">Figure / Screenshot</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal d1">
+          <div class="about-card__hd">
+            <h3 class="about-card__title">Web Application</h3>
+            <a href="#manual" class="btn btn-primary about-card__btn">Quick Start &rarr;</a>
           </div>
+          <img src="assets/img/grepiwebappepipbrowse.png" alt="grEPI web application" class="about-card__img">
+        </div>
+        <div class="about-card reveal d2">
+          <div class="about-card__hd">
+            <h3 class="about-card__title">API Services</h3>
+            <a href="#api" class="btn btn-primary about-card__btn">Quick Start &rarr;</a>
+          </div>
+          <img src="assets/img/grepiapiepipresponse.png" alt="grEPI API services" class="about-card__img">
         </div>
       </div>
 
@@ -485,6 +492,12 @@
     </div>
   </footer>
 
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__img" src="" alt="">
+  </div>
+
   <!-- Back to top -->
   <button id="back-to-top" aria-label="Back to top">
     <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
@@ -756,6 +769,31 @@
         setTimeout(() => btn.textContent = 'Copy', 1800);
       });
     }
+
+    /* ─── Lightbox ──────────────────────────────────────────── */
+    (function () {
+      const lb     = document.getElementById('lightbox');
+      const lbImg  = lb.querySelector('.lightbox__img');
+      const lbClose = lb.querySelector('.lightbox__close');
+
+      document.querySelectorAll('.about-card__img').forEach(img => {
+        img.addEventListener('click', () => {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function close() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      lbClose.addEventListener('click', close);
+      lb.addEventListener('click', e => { if (e.target === lb) close(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    })();
   </script>
 </body>
 </html>
