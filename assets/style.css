@@ -279,7 +279,7 @@ ul  { list-style: none; }
 .btn-gold:hover { background: var(--gold-lt); border-color: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,146,10,0.28); }
 
 /* ─── Sections ────────────────────────────────────────────── */
-.section { padding: 5.5rem clamp(1rem, 4vw, 3rem); }
+.section { padding: 1rem clamp(1rem, 4vw, 3rem) 5.5rem; }
 .section__inner { max-width: var(--max-w); margin: 0 auto; }
 .section__hd { margin-bottom: 3.5rem; }
 .eyebrow {
