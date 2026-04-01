@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -21,6 +22,7 @@
     <nav aria-label="Main navigation">
       <ul class="nav__links" id="navMenu">
         <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
         <li><a href="#manual"   class="nav-link">User Manual</a></li>
         <li><a href="#api"      class="nav-link">API Documentation</a></li>
         <li><a href="#roadmap"  class="nav-link">Roadmap</a></li>
@@ -99,50 +101,107 @@
         <div class="about-card reveal d1">
           <div class="about-card__hd">
             <h3 class="about-card__title">Web Application</h3>
-            <a href="#manual" class="btn btn-primary about-card__btn">Quick Start &rarr;</a>
+            <a href="#manual" class="btn btn-primary about-card__btn">Quick Start <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a>
           </div>
           <img src="assets/img/grepiwebappepipbrowse.png" alt="grEPI web application" class="about-card__img">
         </div>
         <div class="about-card reveal d2">
           <div class="about-card__hd">
             <h3 class="about-card__title">API Services</h3>
-            <a href="#api" class="btn btn-primary about-card__btn">Quick Start &rarr;</a>
+            <a href="#api" class="btn btn-primary about-card__btn">Quick Start <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a>
           </div>
           <img src="assets/img/grepiapiepipresponse.png" alt="grEPI API services" class="about-card__img">
         </div>
       </div>
-
       <!-- Feature cards -->
+      <div class="features-title">Highlights</div>
       <div class="features">
         <div class="feat-card reveal d1">
-          <div class="feat-card__icon">⚡</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <h3 class="feat-card__title"><span class="material-icons-outlined feat-card__title-icon">diamond</span>Standards and quality</h3>
+          <p class="feat-card__text">To address the main challenge of data heterogeneity and significant amount of time and effort needed to adjust the data to be able to use it further, grEPI is currently adhering to the <a target="_blank" href="https://www.who.int/classifications/icd">WHO International Classification of Diseases(ICD-11)</a>, legally cleared  <a target="_blank" href="https://www.who.int/geo">WHO Geo Data standard for Health Boundaries for Administrative Level 0 (Countries, Territories, Areas)</a> and is also implementing best practices for classifying and categorizing specific properties of an epidemiological parameter estimate or a literature item.</p>
+          <p class="feat-card__text">Using standardized actively maintained vocabulary increases the data quality and enables better understanding of the context. <br><br><a href="#features" class="btn btn-primary about-card__btn">Learn more <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a></p>
         </div>
         <div class="feat-card reveal d2">
-          <div class="feat-card__icon">🔬</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="feat-card__title"><span class="material-icons-outlined feat-card__title-icon">explore</span>Accessibility and Usability</h3>
+          <p class="feat-card__text">Using grEPI main features such as browsing and exporting epidemiological parameter estimates and literature in both web application and API does not bear any licensing cost and does not require creating of an application account. As a digital public good for health, access to grEPI is free and open. One only needs to be connected to the Internet for being able to use grEPI in their web browser.</p>
+          <p class="feat-card__text">Using grEPI web application interface does not require any specific technical background or skillset. The interface is designed to be as user-friendly as possible and to enable smooth user journeys to the desired outcomes. <br><br><a href="#manual" class="btn btn-primary about-card__btn">Learn more <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a></p>
         </div>
         <div class="feat-card reveal d3">
-          <div class="feat-card__icon">📈</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h3 class="feat-card__title"><span class="material-icons-outlined feat-card__title-icon">lock_open</span>Flexibility and integrability</h3>
+          <p class="feat-card__text">grEPI´s design approach is to enable quick adaptation and response to the changes in the field as well as to serve as a global digital public good for health. grEPI is not disease or pathogen specific, limited to specific epidemiological parameter categories, geographies or any specific context. The underlying relational database is built to support relations between specific entities and properties rather then hardcoding the specific context for a specific use case.</p>
+          <p class="feat-card__text">Reference data module serves as a core feature in grEPI web application for enabling quick configuration of new specific contexts or applying changes to the existing ones by using user-friendly interface. <br><br><a href="#" class="btn btn-primary about-card__btn">Learn more <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section s-features parallax-section" id="features" data-parallax="0.06">
+    <div class="section__inner">
+      <div class="section__hd reveal">
+        <span class="eyebrow">Features</span>
+        <h2 class="section__title">Global Repository of Epidemiological Parameters</h2>
+        <div class="rule"></div>
+        <p class="section__lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+
+      <!-- Feature highlight banner -->
+      <div class="ftr-banner reveal">
+        <div class="ftr-banner__body">
+          <span class="material-icons-outlined ftr-banner__icon">hub</span>
+          <div>
+            <div class="ftr-banner__title">Lorem ipsum dolor sit amet</div>
+            <p class="ftr-banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+          </div>
         </div>
-        <div class="feat-card reveal d1">
-          <div class="feat-card__icon">🧮</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+        <a href="#manual" class="btn btn-gold">Lorem ipsum dolor sit amet <span class="material-icons-outlined btn-arrow">arrow_right_alt</span></a>
+      </div>
+
+      <!-- Feature rows -->
+      <div class="ftr-list">
+        <div class="ftr-item reveal d1">
+          <span class="material-icons-outlined ftr-item__icon">search</span>
+          <div>
+            <h4 class="ftr-item__title">Lorem ipsum dolor sit amet/h4>
+            <p class="ftr-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim veniam.</p>
+          </div>
         </div>
-        <div class="feat-card reveal d2">
-          <div class="feat-card__icon">📦</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+        <div class="ftr-item reveal d2">
+          <span class="material-icons-outlined ftr-item__icon">download</span>
+          <div>
+            <h4 class="ftr-item__title">Ut enim ad minim veniam</h4>
+            <p class="ftr-item__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+          </div>
         </div>
-        <div class="feat-card reveal d3">
-          <div class="feat-card__icon">📋</div>
-          <h3 class="feat-card__title">Lorem ipsum dolor sit amet</h3>
-          <p class="feat-card__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+        <div class="ftr-item reveal d3">
+          <span class="material-icons-outlined ftr-item__icon">api</span>
+          <div>
+            <h4 class="ftr-item__title">Duis aute irure dolor in reprehenderit</h4>
+            <p class="ftr-item__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+          </div>
+        </div>
+        <div class="ftr-item reveal d1">
+          <span class="material-icons-outlined ftr-item__icon">verified</span>
+          <div>
+            <h4 class="ftr-item__title">Excepteur sint occaecat cupidatat non proident</h4>
+            <p class="ftr-item__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed perspiciatis.</p>
+          </div>
+        </div>
+        <div class="ftr-item reveal d2">
+          <span class="material-icons-outlined ftr-item__icon">language</span>
+          <div>
+            <h4 class="ftr-item__title">Nemo enim ipsam voluptatem</h4>
+            <p class="ftr-item__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione.</p>
+          </div>
+        </div>
+        <div class="ftr-item reveal d3">
+          <span class="material-icons-outlined ftr-item__icon">group</span>
+          <div>
+            <h4 class="ftr-item__title">At vero eos et accusamus et iusto odio dignissimos</h4>
+            <p class="ftr-item__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+          </div>
         </div>
       </div>
     </div>
