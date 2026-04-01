@@ -350,6 +350,7 @@ ul  { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1.25rem;
@@ -500,7 +501,7 @@ ul  { list-style: none; }
   margin-top: 1rem;
 }
 .feat-card {
-  background: var(--white);
+  background: #ffffff;
   border: 1.5px solid var(--border);
   border-radius: 10px;
   padding: 1.85rem 1.6rem;
@@ -1001,7 +1002,7 @@ ul  { list-style: none; }
   transition: opacity 0.3s ease, transform 0.3s ease, background 0.25s ease;
 }
 #back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-#back-to-top:hover   { background: var(--gold); }
+#back-to-top:hover   { background: linear-gradient(to bottom, var(--navy) 50%, var(--gold-lt) 50%); }
 #back-to-top svg     { width: 18px; height: 18px; fill: none; stroke: currentColor; }
 
 /* ─── Lightbox ────────────────────────────────────────────── */
