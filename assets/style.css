@@ -30,6 +30,7 @@ body {
 img { max-width: 100%; display: block; }
 a      { color: inherit; text-decoration: none; }
 p a    { color: #0066cc; text-decoration: underline; }
+p a:visited { color: #00008b; }
 p a:hover { color: #004499; }
 ul  { list-style: none; }
 
