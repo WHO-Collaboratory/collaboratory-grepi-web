@@ -6,10 +6,10 @@
   --gold-lt:   #F4A81D;
   --blue:     #009ADE;
   --gold-pale: rgba(201,146,10,0.10);
-  --white:     #FFFFFF;
-  --off-white: #F7F8FA;
-  --border:    #DDE3EE;
-  --muted:     #596070;
+  --white:     #F5F6F8;
+  --off-white: #ECEEF2;
+  --border:    #D0D6E4;
+  --muted:     #52596A;
   --nav-h:     70px;
   --nav-h-sm:  56px;
   --ease:      cubic-bezier(0.16, 1, 0.3, 1);
@@ -128,7 +128,7 @@ ul  { list-style: none; }
 .nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ─── Hero ───────────────────────────────────────────────── */
-.hero {
+.grepi {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -137,7 +137,7 @@ ul  { list-style: none; }
   overflow: hidden;
   background: var(--white);
 }
-#hero-canvas {
+#grepi-canvas {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -145,25 +145,25 @@ ul  { list-style: none; }
   height: 100%;
   display: block;
 }
-.hero__body {
+.grepi__body {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 8rem 1.5rem 5rem;
   max-width: 780px;
 }
-.hero__brand {
+.grepi__brand {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
   font-size: 2.5rem;
   font-weight: 700;
 }
-.hero__brand img {
+.grepi__brand img {
   height: 1em;
   width: auto;
 }
-.hero__eyebrow {
+.grepi__eyebrow {
   display: inline-block;
   font-size: 0.73rem;
   font-weight: 700;
@@ -174,7 +174,7 @@ ul  { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.8s var(--ease) 0.1s forwards;
 }
-.hero__title {
+.grepi__title {
   font-family: 'Source Sans 3', sans-serif;
   font-size: clamp(2.6rem, 6vw, 4rem);
   font-weight: 400;
@@ -184,12 +184,12 @@ ul  { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.9s var(--ease) 0.25s forwards;
 }
-.hero__title em {
+.grepi__title em {
   font-style: italic;
   color: var(--gold-lt);
 }
 
-.hero__rule {
+.grepi__rule {
   width: 48px; height: 3px;
   background: var(--gold-lt);
   border-radius: 2px;
@@ -197,7 +197,7 @@ ul  { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.8s var(--ease) 0.4s forwards;
 }
-.hero__tagline {
+.grepi__tagline {
   font-size: clamp(1rem, 2.2vw, 1.18rem);
   font-weight: 300;
   color: var(--navy);
@@ -207,7 +207,7 @@ ul  { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.9s var(--ease) 0.5s forwards;
 }
-.hero__cta {
+.grepi__cta {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -215,7 +215,7 @@ ul  { list-style: none; }
   opacity: 0;
   animation: fadeUp 0.9s var(--ease) 0.65s forwards;
 }
-.hero__badges {
+.grepi__badges {
   display: flex;
   gap: 0.6rem;
   justify-content: center;
@@ -238,7 +238,7 @@ ul  { list-style: none; }
   color: var(--muted);
   background: var(--white);
 }
-.hero__scroll {
+.grepi__scroll {
   position: absolute;
   bottom: 2rem; left: 50%;
   transform: translateX(-50%);
@@ -255,7 +255,7 @@ ul  { list-style: none; }
   animation: scrollBounce 2.4s ease-in-out infinite;
   z-index: 1;
 }
-.hero__scroll svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
+.grepi__scroll svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
 
 /* ─── Buttons ─────────────────────────────────────────────── */
 .btn {
@@ -329,13 +329,13 @@ ul  { list-style: none; }
 }
 
 /* ─── Section backgrounds ─────────────────────────────────── */
-.s-hero     { background: var(--white); }
+.s-grepi     { background: var(--white); }
 .s-about    { background: var(--white); }
 .s-features { background: var(--off-white); }
 .s-manual   { background: var(--white); }
 .s-api      { background: var(--off-white); }
 .s-roadmap  { background: var(--white); }
-.s-releases { background: var(--off-white); }
+.s-releases { background: var(--off-white); padding-bottom: 3rem; }
 
 /* ─── About layout ────────────────────────────────────────── */
 .about-grid {
@@ -1082,6 +1082,6 @@ ul  { list-style: none; }
   .footer__nav   { justify-content: center; }
 }
 @media (max-width: 480px) {
-  .hero__cta { flex-direction: column; align-items: center; }
+  .grepi__cta { flex-direction: column; align-items: center; }
   .btn       { width: 220px; text-align: center; }
 }

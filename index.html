@@ -16,7 +16,7 @@
 
   <!-- Navigation -->
   <header class="nav" id="nav">
-    <a href="#hero" class="nav__logo" aria-label="grepi — go to top">
+    <a href="#grepi" class="nav__logo" aria-label="grepi — go to top">
       <img src="assets/img/collab_0.png" alt="grepi" />
     </a>
     <nav aria-label="Main navigation">
@@ -40,30 +40,30 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero s-hero" id="hero">
-    <canvas id="hero-canvas"></canvas>
-    <div class="hero__body">
-      <!-- <span class="hero__eyebrow">R Package · Epidemiology · Version 1.0</span> -->
-      <div class="hero__brand"><img src="assets/img/grepi-ico.png" alt="grepi" /><span class="section__title_navy">grEPI</span></div>
+  <section class="grepi s-grepi" id="grepi">
+    <canvas id="grepi-canvas"></canvas>
+    <div class="grepi__body">
+      <!-- <span class="grepi__eyebrow">R Package · Epidemiology · Version 1.0</span> -->
+      <div class="grepi__brand"><img src="assets/img/grepi-ico.png" alt="grepi" /><span class="section__title_navy">grEPI</span></div>
       <h1 class="section__title_yellow">Global Repository of <span class="section__title_yellow">Epidemiological Parameters</span></h1>
-      <!-- <div class="hero__rule"></div> -->
-      <!-- <p class="hero__tagline">
+      <!-- <div class="grepi__rule"></div> -->
+      <!-- <p class="grepi__tagline">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
         Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Designed for epidemiologists, mathematicians, and data scientists using R.
       </p> -->
-      <div class="hero__cta">
+      <div class="grepi__cta">
         <a href="#about" class="btn btn-primary">Get Started</a>
         <a href="#api"    class="btn btn-primary">User Manual</a>
         <a href="#api"    class="btn btn-primary">API Documentation</a>
       </div>
-      <!-- <div class="hero__badges">
+      <!-- <div class="grepi__badges">
         <span class="badge">Epidemiology</span>
         <span class="badge">Data Science</span>
         <span class="badge">Collaboration</span>
       </div> -->
     </div>
-    <div class="hero__scroll" aria-hidden="true">
+    <div class="grepi__scroll" aria-hidden="true">
       <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       <span>Scroll</span>
     </div>
@@ -576,7 +576,7 @@
      * Implemented with Canvas 2D for universal browser support.
      * ─────────────────────────────────────────────────────────── */
     (function () {
-      const canvas = document.getElementById('hero-canvas');
+      const canvas = document.getElementById('grepi-canvas');
       const ctx    = canvas.getContext('2d');
       if (!ctx) return;
 
