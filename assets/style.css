@@ -741,7 +741,8 @@ ul  { list-style: none; }
 .api-card .code-block__lang { color: var(--navy); }
 .api-card .code-block__copy { color: var(--muted); }
 .api-card .code-block__copy:hover { color: var(--navy); }
-.api-card .code-block pre { color: #1a1a2e; }
+.api-card .code-block pre { color: #1a1a2e; font-size: 0.72rem; padding: 0.9rem 1rem; line-height: 1.6; }
+.api-card.d5 .code-block pre { font-size: 0.61rem; }
 .api-card .code-block pre .kw  { color: #d6336c; }
 .api-card .code-block pre .fn  { color: #6741d9; }
 .api-card .code-block pre .str { color: #1971c2; }
