@@ -552,8 +552,8 @@ ul  { list-style: none; }
   margin-top: auto;
 }
 .features a { text-decoration: none; }
-.features a:hover { color: var(--white); }
-.feat-card__text a:hover { color: var(--blue); }
+.features a:hover { background: var(--blue); color: var(--white); }
+.feat-card__text a:not(.btn):hover { color: var(--blue); }
 
 /* ─── User Manual ─────────────────────────────────────────── */
 .manual-layout {
