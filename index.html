@@ -351,6 +351,23 @@
             <span class="api-tag">ICD-11</span>
           </div>
         </div>
+        <div class="api-card reveal d5">
+          <div class="api-card__fn"><span>Example: </span>R</div>
+          <p class="api-card__desc">library(httr2)</p>
+          <p class="api-card__desc">resp <- request("<https://collaboratory.who.int/grepi/api/EpiParameterEstimates>") |></p>
+          <p class="api-card__desc">  req_url_query(Disease_Name_Preferred = "Measles") |></p>
+          <p class="api-card__desc">  req_perform() |></p>
+          <p class="api-card__desc">measles <- resp_body_json(resp, simplifyVector = TRUE)</p>
+        </div>
+        <div class="api-card reveal d6">
+          <div class="api-card__fn"><span>Example: </span>Python</div>
+          <p class="api-card__desc">import requests</p>
+          <p class="api-card__desc">response = requests.get(</p>
+          <p class="api-card__desc">  "<https://collaboratory.who.int/grepi/api/EpiParameterEstimates>",</p>
+          <p class="api-card__desc">  params={"Disease_Name_Preferred": "Measles"}</p>
+          <p class="api-card__desc">)</p>
+          <p class="api-card__desc">measles = response.json()</p>
+        </div>
       </div>
 
       <div style="margin-top: 2.5rem;" class="reveal">
