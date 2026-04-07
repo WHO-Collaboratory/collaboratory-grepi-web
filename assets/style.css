@@ -688,7 +688,7 @@ ul  { list-style: none; }
 .card__pdf-preview:hover { background: #eef3fa; }
 .card__pdf-icon { color: #e53e3e; }
 .card__pdf-icon svg { width: 48px; height: 48px; }
-.card__pdf-label { font-size: 0.8rem; font-weight: 600; text-align: center; color: var(--navy); text-transform: capitalize; }
+.card__pdf-label { font-size: 0.8rem; font-weight: 600; text-align: center; color: var(--navy);  }
 .card__pdf-open  { font-size: 0.75rem; color: var(--blue); }
 @media (max-width: 640px) {
   .api-intro { flex-direction: column; }
