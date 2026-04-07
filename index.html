@@ -297,43 +297,43 @@
         <span class="eyebrow">API</span>
         <h2 class="section__title">Getting started with grEPI API public endpoints</h2>
         <div class="rule"></div>
-        <p class="section__lead">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <p>
+          grEPI provides a public REST API that returns data in JSON format. The API is read-only and does not require authentication or a Collaboratory account. The base URL for all requests is  <a target="_blank" href="https://collaboratory.who.int/grepi/api">https://collaboratory.who.int/grepi/api</a>. String filters are case-insensitive and support partial matching.
         </p>
       </div>
 
       <div class="api-grid">
         <div class="api-card reveal d1">
-          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
-          <p class="api-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fit epidemic models via MLE or Bayesian inference.</p>
+          <div class="api-card__fn"><span>EpiParameterEstimates</span>_Get()</div>
+          <p class="api-card__desc">Epidemiological parameter estimates extracted from the literature. Filter by disease, pathogen, estimate type, and more.</p>
           <div class="api-tags">
-            <span class="api-tag">tag 1</span>
-            <span class="api-tag">tag 2</span>
-            <span class="api-tag">tag 3</span>
+            <span class="api-tag">Estimates</span>
           </div>
         </div>
         <div class="api-card reveal d2">
-          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
-          <p class="api-card__desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Generate probabilistic forecasts from a fitted grepi model object with uncertainty quantification.</p>
+          <div class="api-card__fn"><span>PublicArticle</span>_Get()</div>
+          <p class="api-card__desc">Literature records from which parameter estimates have been extracted. Search by DOI, title, author, or year.</p>
           <div class="api-tags">
-            <span class="api-tag">tag 1</span>
-            <span class="api-tag">tag 2</span>
+            <span class="api-tag">Literature</span>
           </div>
         </div>
         <div class="api-card reveal d3">
-          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
-          <p class="api-card__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Model diagnostics, residuals, and goodness-of-fit statistics.</p>
+          <div class="api-card__fn"><span>PathogenTaxonomy</span>_Get()</div>
+          <p class="api-card__desc">Pathogen taxonomy with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
-            <span class="api-tag">tag 1</span>
-            <span class="api-tag">tag 2</span>
+            <span class="api-tag">Reference</span>
+            <span class="api-tag">Pathogen</span>
+            <span class="api-tag">ICD-11</span>
           </div>
         </div>
         <div class="api-card reveal d4">
-          <div class="api-card__fn"><span>lorem_ipsum</span>_Get()</div>
-          <p class="api-card__desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt. Produce publication-ready ggplot2 visualisations of model fits, forecasts, and parameter posteriors.</p>
+          <div class="api-card__fn"><span>DiseaseCausedByPathogen/span>_Get()</div>
+          <p class="api-card__desc">Disease-to-pathogen mappings with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
-            <span class="api-tag">tag 1</span>
-            <span class="api-tag">tag 2</span>
+            <span class="api-tag">Reference</span>
+            <span class="api-tag">Disease</span>
+            <span class="api-tag">Pathogen</span>
+            <span class="api-tag">ICD-11</span>
           </div>
         </div>
       </div>
