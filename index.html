@@ -309,12 +309,30 @@
         <span class="eyebrow">API</span>
         <h2 class="section__title">Getting started with grEPI API public endpoints</h2>
         <div class="rule"></div>
-        <p>
-          grEPI provides a public REST API that returns data in JSON format. The API is read-only and does not require authentication.
-        </p>
-        <p>
-         The base URL for all requests is  <a target="_blank" href="https://collaboratory.who.int/grepi/api">https://collaboratory.who.int/grepi/api</a>. String filters are case-insensitive and support partial matching. 
-        </p>
+        <div class="api-intro">
+          <div class="api-intro__text">
+            <p>
+              grEPI provides a public REST API that returns data in JSON format. The API is read-only and does not require authentication.
+            </p>
+            <p>
+              The base URL for all requests is <a target="_blank" href="https://collaboratory.who.int/grepi/api">https://collaboratory.who.int/grepi/api</a>. String filters are case-insensitive and support partial matching.
+            </p>
+          </div>
+          <div class="api-intro__card">
+            <a href="assets/files/grEPI_API_Documentation.pdf" target="_blank" rel="noopener noreferrer" class="card__pdf-preview">
+              <div class="card__pdf-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="9" y1="13" x2="15" y2="13"/>
+                  <line x1="9" y1="17" x2="15" y2="17"/>
+                </svg>
+              </div>
+              <span class="card__pdf-label">grEPI API Documentation</span>
+              <span class="card__pdf-open">Download PDF ↗</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="api-grid">
@@ -352,21 +370,32 @@
           </div>
         </div>
         <div class="api-card reveal d5">
-          <div class="api-card__fn"><span>Example: </span>R</div>
-          <p class="api-card__desc">library(httr2)</p>
-          <p class="api-card__desc">resp <- request("< <a target="_blank" href="https://collaboratory.who.int/grepi/api/EpiParameterEstimates">https://collaboratory.who.int/grepi/api/EpiParameterEstimates</a> >") |></p>
-          <p class="api-card__desc">  req_url_query(Disease_Name_Preferred = "Measles") |></p>
-          <p class="api-card__desc">  req_perform()</p>
-          <p class="api-card__desc">measles <- resp_body_json(resp, simplifyVector = TRUE)</p>
+          <div class="api-card__fn"><span>Example</div>
+          <div class="code-block">
+            <div class="code-block__bar">
+              <span class="code-block__lang">R</span>
+            </div>
+            <pre><span class="fn">library</span>(httr2)
+resp &lt;- <span class="fn">request</span>(<span class="str">"https://collaboratory.who.int/grepi/api/EpiParameterEstimates"</span>) |&gt;
+  <span class="fn">req_url_query</span>(Disease_Name_Preferred = <span class="str">"Measles"</span>) |&gt;
+  <span class="fn">req_perform</span>()
+measles &lt;- <span class="fn">resp_body_json</span>(resp, simplifyVector = <span class="kw">TRUE</span>)</pre>
+          </div>
         </div>
         <div class="api-card reveal d6">
-          <div class="api-card__fn"><span>Example: </span>Python</div>
-          <p class="api-card__desc">import requests</p>
-          <p class="api-card__desc">response = requests.get(</p>
-          <p class="api-card__desc">  "< <a target="_blank" href="https://collaboratory.who.int/grepi/api/EpiParameterEstimates">https://collaboratory.who.int/grepi/api/EpiParameterEstimates</a> >",</p>
-          <p class="api-card__desc">  params={"Disease_Name_Preferred": "Measles"}</p>
-          <p class="api-card__desc">)</p>
-          <p class="api-card__desc">measles = response.json()</p>
+          <div class="api-card__fn"><span>Example</div>
+          <div class="code-block">
+            <div class="code-block__bar">
+              <span class="code-block__lang">Python</span>
+            </div>
+            <pre><span class="kw">import</span> requests
+
+response = requests.<span class="fn">get</span>(
+  <span class="str">"https://collaboratory.who.int/grepi/api/EpiParameterEstimates"</span>,
+  params={<span class="str">"Disease_Name_Preferred"</span>: <span class="str">"Measles"</span>}
+)
+measles = response.<span class="fn">json</span>()</pre>
+          </div>
         </div>
       </div>
 
