@@ -312,10 +312,7 @@
         <div class="api-intro">
           <div class="api-intro__text">
             <p>
-              grEPI provides a public REST API that returns data in JSON format. The API is read-only and does not require authentication.
-            </p>
-            <p>
-              The base URL for all requests is <a target="_blank" href="https://collaboratory.who.int/grepi/api">https://collaboratory.who.int/grepi/api</a>. String filters are case-insensitive and support partial matching.
+             grEPI provides a public, read-only REST API that returns data in JSON format. No authentication is required. The base URL for all requests is <a target="_blank" href="https://collaboratory.who.int/grepi/api">https://collaboratory.who.int/grepi/api</a>. String filters are case-insensitive and support partial matching. For full details, see the grEPI API documentation.
             </p>
           </div>
           <div class="api-intro__card">
@@ -328,7 +325,7 @@
                   <line x1="9" y1="17" x2="15" y2="17"/>
                 </svg>
               </div>
-              <span class="card__pdf-label">grEPI API Documentation</span>
+              <span class="card__pdf-label">grEPI API documentation</span>
               <span class="card__pdf-open">Download PDF ↗</span>
             </a>
           </div>
@@ -337,21 +334,21 @@
 
       <div class="api-grid">
         <div class="api-card reveal d1">
-          <div class="api-card__fn"><span>EpiParameterEstimates</span>_Get()</div>
+          <div class="api-card__fn"><span>EpiParameterEstimates</span></div>
           <p class="api-card__desc">Epidemiological parameter estimates extracted from the literature. Filter by disease, pathogen, estimate type, and more.</p>
           <div class="api-tags">
             <span class="api-tag">Estimates</span>
           </div>
         </div>
         <div class="api-card reveal d2">
-          <div class="api-card__fn"><span>PublicArticle</span>_Get()</div>
+          <div class="api-card__fn"><span>PublicArticle</span></div>
           <p class="api-card__desc">Literature records from which parameter estimates have been extracted. Search by DOI, title, author, or year.</p>
           <div class="api-tags">
             <span class="api-tag">Literature</span>
           </div>
         </div>
         <div class="api-card reveal d3">
-          <div class="api-card__fn"><span>PathogenTaxonomy</span>_Get()</div>
+          <div class="api-card__fn"><span>PathogenTaxonomy</span></div>
           <p class="api-card__desc">Pathogen taxonomy with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
             <span class="api-tag">Reference</span>
@@ -360,7 +357,7 @@
           </div>
         </div>
         <div class="api-card reveal d4">
-          <div class="api-card__fn"><span>DiseaseCausedByPathogen</span>_Get()</div>
+          <div class="api-card__fn"><span>DiseaseCausedByPathogen</span></div>
           <p class="api-card__desc">Disease-to-pathogen mappings with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
             <span class="api-tag">Reference</span>
@@ -373,13 +370,13 @@
           <div class="api-card__fn"><span>Example</div>
           <div class="code-block">
             <div class="code-block__bar">
-              <span class="code-block__lang">R</span>
+              <span class="code-block__lang">Retrieve Measles Estimates with R</span>
               <button class="code-block__copy" onclick="copyCode(this)">Copy</button>
             </div>
-            <pre><span class="fn">library</span>(httr2)
+            <pre><span class="fn">library</span>(httr2)<br>
 resp &lt;- <span class="fn">request</span>(<span class="str">"https://collaboratory.who.int/grepi/api/EpiParameterEstimates"</span>) |&gt;
   <span class="fn">req_url_query</span>(Disease_Name_Preferred = <span class="str">"Measles"</span>) |&gt;
-  <span class="fn">req_perform</span>()
+  <span class="fn">req_perform</span>()<br>
 measles &lt;- <span class="fn">resp_body_json</span>(resp, simplifyVector = <span class="kw">TRUE</span>)</pre>
           </div>
         </div>
@@ -387,15 +384,15 @@ measles &lt;- <span class="fn">resp_body_json</span>(resp, simplifyVector = <spa
           <div class="api-card__fn"><span>Example</div>
           <div class="code-block">
             <div class="code-block__bar">
-              <span class="code-block__lang">Python</span>
+              <span class="code-block__lang">Retrieve Measles Estimates with Python</span>
               <button class="code-block__copy" onclick="copyCode(this)">Copy</button>
             </div>
-            <pre><span class="kw">import</span> requests
+            <pre><span class="kw">import</span> requests<br>
 
 response = requests.<span class="fn">get</span>(
   <span class="str">"https://collaboratory.who.int/grepi/api/EpiParameterEstimates"</span>,
   params={<span class="str">"Disease_Name_Preferred"</span>: <span class="str">"Measles"</span>}
-)
+)<br>
 measles = response.<span class="fn">json</span>()</pre>
           </div>
         </div>
