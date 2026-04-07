@@ -692,7 +692,7 @@ ul  { list-style: none; }
   color: var(--navy);
   margin-bottom: 0.5rem;
 }
-.api-card__fn span { color: var(--gold); }
+.api-card__fn span { color: var(--blue); }
 .api-card__desc {
   font-size: 0.875rem;
   color: var(--muted);
