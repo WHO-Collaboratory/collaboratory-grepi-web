@@ -933,7 +933,7 @@ ul  { list-style: none; }
   align-items: center;
   gap: 1rem;
   padding: 1.2rem 1.75rem;
-  background: var(--off-white);
+  background: white;
   border-bottom: 1px solid var(--border);
 }
 .release-card__ver {
@@ -958,7 +958,7 @@ ul  { list-style: none; }
 .rb-latest { background: rgba(0,32,92,0.09); color: var(--navy); }
 .rb-stable { background: rgba(201,146,10,0.15); color: #7a5600; }
 .rb-legacy { background: var(--off-white); color: var(--muted); border: 1px solid var(--border); }
-.release-card__body { padding: 1.5rem 1.75rem; }
+.release-card__body { padding: 1.5rem 1.75rem; background: white; }
 .release-list {
   display: flex;
   flex-direction: column;
