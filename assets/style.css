@@ -549,7 +549,6 @@ ul  { list-style: none; }
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.72;
-  margin-top: auto;
 }
 .features a { text-decoration: none; }
 .features a:hover { background: var(--blue); color: var(--white); }
