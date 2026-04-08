@@ -551,7 +551,7 @@ ul  { list-style: none; }
   line-height: 1.72;
 }
 .features a { text-decoration: none; }
-.features a:hover { background: var(--blue); color: var(--white); }
+.features a.btn:hover { background: var(--blue); color: var(--white); }
 .feat-card__text a:not(.btn):hover { color: var(--blue); }
 
 /* ─── User Manual ─────────────────────────────────────────── */
