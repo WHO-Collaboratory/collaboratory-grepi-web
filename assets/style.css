@@ -335,7 +335,7 @@ ul  { list-style: none; }
 .s-manual   { background: var(--white); }
 .s-api      { background: var(--off-white); }
 .s-roadmap  { background: var(--white); }
-.s-releases { background: var(--off-white); padding-bottom: 3rem; }
+.s-releases { background: var(--white); padding-bottom: 3rem; }
 
 /* ─── About layout ────────────────────────────────────────── */
 .about-grid {
