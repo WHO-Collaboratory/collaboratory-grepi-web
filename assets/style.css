@@ -290,7 +290,7 @@ ul  { list-style: none; }
 /* ─── Sections ────────────────────────────────────────────── */
 .section { padding: 1rem clamp(1rem, 4vw, 3rem) 1rem; }
 .section__inner { max-width: var(--max-w); margin: 0 auto; }
-.section__hd { margin-bottom: 3.5rem; }
+.section__hd { margin-bottom: 2.5rem; }
 .eyebrow {
   display: inline-block;
   font-size: 0.72rem;
