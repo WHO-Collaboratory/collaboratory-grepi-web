@@ -807,11 +807,11 @@ ul  { list-style: none; }
 }
 .ftr-item {
   display: flex;
-  gap: 1rem;
-  background: var(--white);
+  flex-direction: column;
+  background: #ffffff;
   border: 1.5px solid var(--border);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.85rem 1.6rem;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
@@ -828,17 +828,18 @@ ul  { list-style: none; }
 }
 .ftr-item:hover { box-shadow: 0 8px 32px rgba(0,32,92,0.09); transform: translateY(-4px); }
 .ftr-item:hover::before { transform: scaleX(1); }
-.ftr-item__icon {
-  font-size: 1.75rem;
-  color: var(--navy);
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
 .ftr-item__title {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.ftr-item__icon {
+  font-size: 1.1rem;
+  color: var(--navy);
 }
 .ftr-item__text {
   font-size: 0.875rem;
