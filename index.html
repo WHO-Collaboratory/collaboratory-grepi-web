@@ -996,11 +996,13 @@ measles = response.<span class="fn">json</span>()</pre>
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (!target) return;
-        if (target.classList.contains('collapsed')) target.classList.remove('collapsed');
-        const tocTop = document.querySelector('.manual-toc').getBoundingClientRect().top;
-        const targetRect = target.getBoundingClientRect();
-        const offset = targetRect.top + window.scrollY - tocTop;
-        window.scrollTo({ top: offset, behavior: 'smooth' });
+        target.classList.toggle('collapsed');
+        if (!target.classList.contains('collapsed')) {
+          const tocTop = document.querySelector('.manual-toc').getBoundingClientRect().top;
+          const targetRect = target.getBoundingClientRect();
+          const offset = targetRect.top + window.scrollY - tocTop;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
       });
     });
 
