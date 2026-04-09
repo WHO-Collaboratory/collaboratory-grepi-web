@@ -285,6 +285,8 @@ ul  { list-style: none; }
 .btn-outline:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
 .btn-gold     { background: var(--gold-lt); color: var(--white); border-color: var(--gold-lt); }
 .btn-gold:hover { background: var(--gold-lt); border-color: var(--gold-lt); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,146,10,0.28); }
+.btn-blue     { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.btn-blue:hover { background: #007bb5; border-color: #007bb5; color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,154,222,0.28); }
 .btn-arrow { font-size: 1.1rem; }
 
 /* ─── Sections ────────────────────────────────────────────── */
@@ -768,14 +770,27 @@ ul  { list-style: none; }
 /* ─── Features section ────────────────────────────────────── */
 .ftr-banner {
   display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: 12px;
+  padding: 0;
+  margin-top: 2.5rem;
+  color: var(--white);
+  overflow: hidden;
+}
+.ftr-banner__row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-  border-radius: 12px;
-  padding: 2rem 2.5rem;
-  margin-top: 2.5rem;
-  color: var(--white);
+  padding: 1.25rem 2.5rem;
+}
+.ftr-banner__row .btn { width: 260px; justify-content: center; flex-shrink: 0; }
+.ftr-banner__divider {
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin: 0 2.5rem;
 }
 .ftr-banner__body {
   display: flex;
@@ -845,6 +860,27 @@ ul  { list-style: none; }
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.7;
+}
+.ftr-item__list {
+  list-style: none;
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.ftr-item__list li {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+.ftr-item__list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
 }
 
 /* ─── Roadmap / Timeline ──────────────────────────────────── */
@@ -1106,7 +1142,7 @@ ul  { list-style: none; }
 @media (max-width: 900px) {
   .features               { grid-template-columns: 1fr 1fr; }
   .ftr-list               { grid-template-columns: 1fr 1fr; }
-  .ftr-banner             { flex-direction: column; align-items: flex-start; }
+  .ftr-banner__row        { flex-direction: column; align-items: flex-start; }
   .about-grid             { grid-template-columns: 1fr; gap: 2rem; }
   .manual-layout          { grid-template-columns: 1fr; }
   .manual-toc             { position: static; }
