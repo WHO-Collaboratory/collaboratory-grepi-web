@@ -996,8 +996,9 @@ measles = response.<span class="fn">json</span>()</pre>
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (!target) return;
+        const tocTop = document.querySelector('.manual-toc').getBoundingClientRect().top;
         const targetRect = target.getBoundingClientRect();
-        const offset = targetRect.top + window.scrollY - (window.innerHeight / 2) + (targetRect.height / 2);
+        const offset = targetRect.top + window.scrollY - tocTop;
         window.scrollTo({ top: offset, behavior: 'smooth' });
       });
     });
