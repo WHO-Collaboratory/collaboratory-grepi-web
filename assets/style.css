@@ -577,7 +577,7 @@ ul  { list-style: none; }
   border: 1.5px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
-  background: var(--white);
+  background: #ffffff;
 }
 .manual-toc__hd {
   padding: 1rem 1.4rem;
@@ -611,7 +611,7 @@ ul  { list-style: none; }
   align-items: start;
 }
 .manual-block__text-card {
-  background: var(--white);
+  background: #ffffff;
   border: 1.5px solid var(--border);
   border-radius: 10px;
   padding: 1.5rem;
