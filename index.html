@@ -279,9 +279,9 @@
               <li><a href="#manual-epifil">Epi Parameters - filter</a></li>
               <li><a href="#manual-epieye">Epi Parameters - view all details</a></li>
               <li><a href="#manual-episel">Epi Parameters - select columns</a></li>
-               <li><a href="#manual-articles">Literature</a></li>
+              <li><a href="#manual-articles">Literature</a></li>
               <li><a href="#manual-ref">Reference Data</a></li>
-              <li><a href="#manual-export">Export &amp; Reports</a></li>
+              <li><a href="#manual-export">Exporting data</a></li>
             </ul>
           </div>
         </aside>
@@ -437,12 +437,34 @@
               </div>
             </div>
           </div>
-          
-          <div class="manual-block collapsed" id="manual-export">
-            <h3 class="manual-block__title" role="button" tabindex="0">Exports & Reports</h3>
+
+          <div class="manual-block collapsed" id="manual-ref">
+            <h3 class="manual-block__title" role="button" tabindex="0">Reference Data</h3>
             <div class="manual-block__cols">
               <div class="manual-block__text-card">
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Reference Data holds the controlled vocabularies that define the valid values used throughout grEPI.</p>
+              </div>
+                <ul class="manual-block__list">
+                  <li><strong>Landing page</strong>: The Reference Data landing page displays a card-based overview of all reference data catalogues and mapping tables.</li>
+                  <li><strong>Cards</strong>: Click any card to open that reference data catalogue.​</li>
+                  <li><strong>Interface controls</strong>: Search, column filters, sorting, select, export and filter operators work the same way as in the epidemiological parameters section.</li>
+                 </ul>
+              <div class="manual-block__img-card">
+                <img src="assets/img/4_Ref_Data.gif" alt="Reference Data walkthrough" style="width:100%;display:block;">
+              </div>
+            </div>
+          </div>
+          
+          <div class="manual-block collapsed" id="manual-export">
+            <h3 class="manual-block__title" role="button" tabindex="0">Exporting data to your local drive</h3>
+            <div class="manual-block__cols">
+              <div class="manual-block__text-card">
+                <p>Each of the three main sections - Epidemiological Parameters, Literature, and  Reference Data (individual catalogues) supports data export in CSV format.</p>
+                 <ul class="manual-block__list">
+                  <li><strong>What gets exported</strong>: Columns: The exported CSV includes only the columns that are currently selected via the Select button. By default, only a subset of columns is selected. Rows: By default, the export includes all rows in the table (unfiltered). The export will be filtered in two situations: if you have entered text in the search bar, only rows matching that search will be exported; or if you have selected specific rows using the checkboxes in the left-hand column, only those selected rows will be exported.</li>
+                  <li><strong>Configure your export</strong>: ​Use the Select button to choose which columns to include. Click Select All button if you want every available field to be included in the exported file. Optionally, apply desired search conditions and filters to include only records of your interests, or use checkboxes in the table to select specific records (entries).</li>
+                  <li><strong>Export button</strong>: Click the Export button to download the CSV file.</li>
+                 </ul>
               </div>
               <div class="manual-block__img-card">
                 <img src="assets/img/5.1_Export.gif" alt="Exports & Reports walkthrough" style="width:100%;display:block;">
@@ -450,17 +472,6 @@
             </div>
           </div>
 
-          <div class="manual-block collapsed" id="manual-ref">
-            <h3 class="manual-block__title" role="button" tabindex="0">Reference Data</h3>
-            <div class="manual-block__cols">
-              <div class="manual-block__text-card">
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <div class="manual-block__img-card">
-                <img src="assets/img/4_Ref_Data.gif" alt="Reference Data walkthrough" style="width:100%;display:block;">
-              </div>
-            </div>
-          </div>
 
 
 
