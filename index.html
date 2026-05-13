@@ -274,6 +274,8 @@
             <ul class="manual-toc__list">
               <li><a href="#manual-navigate">Navigate the Application</a></li>
               <li><a href="#manual-quick">Sign In and Access</a></li>
+              <li><a href="#manual-homeCount">Homepage - Stats - Interactive count</a></li>
+              <li><a href="#manual-homeChart">Homepage - Stats - Interactive chart</a></li>
               <li><a href="#manual-episearch">Epi Parameters - search function</a></li>
               <li><a href="#manual-epi">Epi Parameters - adjust the table</a></li>
               <li><a href="#manual-epifil">Epi Parameters - filter</a></li>
@@ -323,6 +325,46 @@
             </div>
           </div>
 
+          <div class="manual-content">
+          <div class="manual-block collapsed" id="manual-homeCount">
+            <h3 class="manual-block__title" role="button" tabindex="0">Homepage - Overview of parameters currently in grEPI</h3>
+            <div class="manual-block__cols">
+              <div class="manual-block__text-card">
+                <p>The overview panel provides a high-level summary of epidemiological parameter estimates currently available in grEPI, grouped by disease. It allows users to quickly see the volume of available data across different diseases.</p>
+                <ul class="manual-block__list">
+                  <li><strong>Disease list</strong>: The panel displays a list of diseases included in grEPI.​</li>
+                  <li><strong>Parameter counts</strong>: Each disease is accompanied by a numeric indicator showing the total number of epidemiological parameter estimates available for that disease.</li>
+                  <li><strong>Navigate to parameter list</strong>: Click on a disease name in the list (e.g. Measles) to navigate directly to the filtered table view of epidemiological parameter estimates.</li>
+                  <li><strong>Return to home</strong>: Use the navigation menu (Home) to return to the main dashboard view.</li>
+                </ul>
+              </div>
+              <div class="manual-block__img-card">
+                <img src="assets/img/1.2 Homepage_stats_count.gif" alt="Sign-in walkthrough" style="width:100%;display:block;">
+              </div>
+            </div>
+          </div>
+
+          <div class="manual-content">
+          <div class="manual-block collapsed" id="manual-homeChart">
+            <h3 class="manual-block__title" role="button" tabindex="0">Homepage - Epidemiological Parameters Grouped by Disease and WHO Region</h3>
+            <div class="manual-block__cols">
+              <div class="manual-block__text-card">
+                <p>This visualization provides an interactive graphical overview of epidemiological parameter estimates grouped by disease and WHO region, allowing users to explore the geographical distribution of available data.</p>
+                <ul class="manual-block__list">
+                  <li><strong>Stacked bar chart</strong>: Parameter estimates are displayed using a stacked bar chart, where each bar represents a disease and is subdivided by WHO regions.​</li>
+                  <li><strong>Hover interaction</strong>: Hover over individual bars or segments to display additional information (e.g. counts per region).</li>
+                  <li><strong>WHO region legend</strong>: The legend on the side shows color‑coded WHO regions.</li>
+                  <li><strong>Filter by region</strong>: Click on one or more regions in the legend to deselect them and dynamically update the chart. Click again to re‑include them.</li>
+                  <li><strong>Navigate to parameter list</strong>: Click on a disease in the chart (e.g. Lassa fever) to navigate to the filtered table view showing only parameter estimates for that disease.</li>
+                  <li><strong>Return to home</strong>: Use the navigation menu (Home) to return to the dashboard.</li>
+                </ul>
+              </div>
+              <div class="manual-block__img-card">
+                <img src="assets/img/1.3 Homepage_chart_DisWHOReg.gif" alt="Sign-in walkthrough" style="width:100%;display:block;">
+              </div>
+            </div>
+          </div>
+          
           <div class="manual-block collapsed" id="manual-episearch">
             <h3 class="manual-block__title" role="button" tabindex="0">Epidemiological Parameters - Search function</h3>
             <div class="manual-block__cols">
