@@ -280,6 +280,7 @@
               <li><a href="#manual-epi">Epi Parameters - adjust the table</a></li>
               <li><a href="#manual-epifil">Epi Parameters - filter</a></li>
               <li><a href="#manual-epieye">Epi Parameters - view all details</a></li>
+              <li><a href="#manual-epicomp">Epi Parameters - compare versions</a></li>
               <li><a href="#manual-episel">Epi Parameters - select columns</a></li>
               <li><a href="#manual-articles">Literature</a></li>
               <li><a href="#manual-ref">Reference Data</a></li>
@@ -444,6 +445,28 @@
              </div>
           </div>
 
+          <div class="manual-block collapsed" id="manual-epicomp">
+            <h3 class="manual-block__title" role="button" tabindex="0">Epidemiological Parameters - Compare versions</h3>
+            <div class="manual-block__cols">
+              <div class="manual-block__text-card">
+                <p>The detailed view of an epidemiological parameter estimate allows users to compare two versions side by side, providing a structured overview of changes across all fields. This feature is only available when there is more than one version of the apidemiological parameter estimate entry.</p>
+                 <ul class="manual-block__list">
+                  <li><strong>Compare versions</strong>: Click on Compare versions button to open the compare view and display two versions next to each other.</li>
+                  <li><strong>Version selection dropdown</strong>: Use the version selector at the top of each panel to choose which versions to compare. The current version is labeled as Active (Current), while previous versions are clearly indicated.​</li>
+                  <li><strong>Legend</strong>: A legend at the top of the compare view explains how changes are highlighted: Green indicates content that has been added, Red indicates content that has been removed, Yellow indicates content that has been modified</li>
+                  <li><strong>Side-by-side comparison</strong>: The screen is divided into two panels, allowing users to view and compare field values across versions in a structured table format (e.g. Disease and Pathogen, Parameter Categorization).</li>
+                  <li><strong>Colored rows</strong>: Differences between versions are visually highlighted within the table making it easy to identify what has changed across versions.</li>
+                  <li><strong>Exit compare</strong>: Click Exit compare to return to the standard parameter detail view.</li>
+                </ul>
+               </div>
+              <div class="manual-block__imgs">
+                <div class="manual-block__img-card">
+                  <img src="assets/img/2.6_Epiparameter_version_compare.gif" alt="Epi Parameter Adjustments" style="width:100%;display:block;">
+                </div>
+              </div>
+             </div>
+          </div>
+
           <div class="manual-block collapsed" id="manual-episel">
             <h3 class="manual-block__title" role="button" tabindex="0">Epidemiological Parameters - Choose columns to be shown in the table</h3>
             <div class="manual-block__cols">
@@ -582,13 +605,21 @@
           </div>
         </div>
         <div class="api-card reveal d2">
+          <div class="api-card__fn"><span>EpiParameterEstimates_Diff</span></div>
+          <p class="api-card__desc">Shows differences between two different versions of the same Epidemiological parameter estimate entry.</p>
+          <div class="api-tags">
+            <span class="api-tag">Estimates</span>
+            <span class="api-tag">Versioning</span>
+          </div>
+        </div>
+        <div class="api-card reveal d3">
           <div class="api-card__fn"><span>PublicArticle</span></div>
           <p class="api-card__desc">Literature records from which parameter estimates have been extracted. Search by DOI, title, author, or year.</p>
           <div class="api-tags">
             <span class="api-tag">Literature</span>
           </div>
         </div>
-        <div class="api-card reveal d3">
+        <div class="api-card reveal d4">
           <div class="api-card__fn"><span>PathogenTaxonomy</span></div>
           <p class="api-card__desc">Pathogen taxonomy with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
@@ -597,7 +628,7 @@
             <span class="api-tag">ICD-11</span>
           </div>
         </div>
-        <div class="api-card reveal d4">
+        <div class="api-card reveal d5">
           <div class="api-card__fn"><span>DiseaseCausedByPathogen</span></div>
           <p class="api-card__desc">Disease-to-pathogen mappings with grEPI preferred names and ICD codes.</p>
           <div class="api-tags">
@@ -607,7 +638,7 @@
             <span class="api-tag">ICD-11</span>
           </div>
         </div>
-        <div class="api-card reveal d5">
+        <div class="api-card reveal d6">
           <div class="api-card__fn"><span>Example</div>
           <div class="code-block">
             <div class="code-block__bar">
@@ -750,8 +781,8 @@ measles = response.<span class="fn">json</span>()</pre>
       <div class="release-card reveal d1">
           <div class="release-card__hd">
             <span class="release-card__ver">v2.0.0</span>
-            <span class="release-card__date">ETA: May 2026</span>
-            <span class="release-card__badge rb-stable">Under development</span>
+            <span class="release-card__date">16 May 2026</span>
+            <span class="release-card__badge rb-latest">Released/span>
           </div>
           <div class="release-card__body">
             <ul class="release-list">
@@ -773,7 +804,7 @@ measles = response.<span class="fn">json</span>()</pre>
         <div class="release-card reveal d2">
           <div class="release-card__hd">
             <span class="release-card__ver">v1.0.0</span>
-            <span class="release-card__date">April 2026</span>
+            <span class="release-card__date">13 April 2026</span>
             <span class="release-card__badge rb-latest">Initial release - Proof of Concept</span>
           </div>
           <div class="release-card__body">
