@@ -274,7 +274,7 @@
             <ul class="manual-toc__list">
               <li><a href="#manual-navigate">Navigate the Application</a></li>
               <li><a href="#manual-quick">Sign In and Access</a></li>
-              <li><a href="#manual-homeCount">Homepage - Interactive count</a></li>
+              <li><a href="#manual-homeCount">Homepage - Live count by disease</a></li>
               <li><a href="#manual-homeChart">Homepage - Interactive chart</a></li>
               <li><a href="#manual-episearch">Epi Parameters - search function</a></li>
               <li><a href="#manual-epi">Epi Parameters - adjust the table</a></li>
@@ -329,14 +329,16 @@
 
           <div class="manual-content">
           <div class="manual-block collapsed" id="manual-homeCount">
-            <h3 class="manual-block__title" role="button" tabindex="0">Homepage - Overview of parameters currently in grEPI</h3>
+            <h3 class="manual-block__title" role="button" tabindex="0">Homepage - Overview of parameters currently in grEPI grouped by disease</h3>
             <div class="manual-block__cols">
               <div class="manual-block__text-card">
-                <p>The overview panel provides a high-level summary of epidemiological parameter estimates currently available in grEPI, grouped by disease. It allows users to quickly see the volume of available data across different diseases.</p>
+                <p>Shows a high-level summary of epidemiological parameter estimates currently available in grEPI grouped by disease. It allows viewers to see the volume of available data across different diseases and quickly access subset of their interest.</p>
                 <ul class="manual-block__list">
-                  <li><strong>Disease list</strong>: The panel displays a list of diseases included in grEPI.​</li>
-                  <li><strong>Parameter counts</strong>: Each disease is accompanied by a numeric indicator showing the total number of epidemiological parameter estimates available for that disease.</li>
-                  <li><strong>Navigate to parameter list</strong>: Click on a disease name in the list (e.g. Measles) to navigate directly to the filtered table view of epidemiological parameter estimates.</li>
+                  <li><strong>Disease list</strong>: The panel displays a list of diseases for which there is at least one epidemiological parameter estimate record in grEPI.​</li>
+                  <li><strong>Count next to disease</strong>: Each disease is accompanied by a numeric indicator showing the total number of epidemiological parameter estimates available in grEPI for that disease.</li>
+                  <li><strong>NEW badge</strong>: NEW badge next to the count of epidemiological parameter estimates for a specific disease indicates that new parameters or new versions of existing parameters have been added in grEPI in last 30 calendar days.</li>
+                  <li><strong>Navigate to filtered browse table</strong>: Click on a disease name in the list (e.g. Measles) to navigate directly to the filtered table view of epidemiological parameter estimates. Records in filtered table are also sorted in the descending order (from newest to oldest) of created date.</li>
+                  <li><strong>Total added in 30 days</strong>: Live count showing total number of new epidemiological parameter estimates or new versions of existing parameters added in grEPI in last 30 calendar days. Click on it to navigate directly to the filtered table sorted by created date in the descending order (from newest to oldeest).</li>
                   <li><strong>Return to home</strong>: Use the navigation menu (Home) to return to the main dashboard view.</li>
                 </ul>
               </div>
